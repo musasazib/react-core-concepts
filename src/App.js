@@ -4,45 +4,45 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Person></Person>
-      <Person />
-      <Friends></Friends>
-      <Friends></Friends>
-      <Students />
-      <Students></Students>
+      <Person name="Shawon Kumar" work="Student"></Person>
+      <Person name="Pronoy Chondoro" work="Garments Worker" />
+      <Friends name="Robin Alom" bari="Raninogur"></Friends>
+      <Friends name="Uzz Zuha Joy" bari="Dobolhati"></Friends>
+      <Students name="Sakib Al Hasan" pore="Eight" />
+      <Students name="Tamim Iqbal" pore="Seven"></Students>
     </div>
   );
 };
 
-function Person() {
+function Person(props) {
   return (
     <div className="person">
-      <h1>Name: Shawn Kumasi</h1>
-      <h3>Profession: Student</h3>
+      <h1>Name: {props.name}</h1>
+      <h3>Profession: {props.work}</h3>
     </div>
   )
 };
 
-function Friends() {
+function Friends(props) {
   const person = {
     backgroundColor: 'skyblue',
     border: '3px solid lightsalmon',
     margin: '10px',
-    borderRadius:'20px'
+    borderRadius: '20px'
   }
   return (
     <div style={person}>
-      <h1>Name: Robin Aloe</h1>
-      <h4>Address: Rajshahi</h4>
+      <h1>Name: {props.name}</h1>
+      <h4>Address: {props.bari}</h4>
     </div>
   )
 };
 
-function Students() {
+function Students(props) {
   return (
-    <div style={{backgroundColor: 'lightgray', border: '3px solid lightsalmon', margin: '10px' ,borderRadius:'20px'}}>
-      <h1>Name: Anodal Khan</h1>
-      <h4>Class: Eight</h4>
+    <div style={{ backgroundColor: 'lightgray', border: '3px solid lightsalmon', margin: '10px', borderRadius: '20px' }}>
+      <h1>Name: {props.name}</h1>
+      <h4>Class: {props.pore}</h4>
     </div>
   )
 }
