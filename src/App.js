@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person></Person>
+      <Person />
+      <Friends></Friends>
+      <Friends></Friends>
+      <Students />
+      <Students></Students>
     </div>
   );
+};
+
+function Person() {
+  return (
+    <div className="person">
+      <h1>Name: Shawn Kumasi</h1>
+      <h3>Profession: Student</h3>
+    </div>
+  )
+};
+
+function Friends() {
+  const person = {
+    backgroundColor: 'skyblue',
+    border: '3px solid lightsalmon',
+    margin: '10px',
+    borderRadius:'20px'
+  }
+  return (
+    <div style={person}>
+      <h1>Name: Robin Aloe</h1>
+      <h4>Address: Rajshahi</h4>
+    </div>
+  )
+};
+
+function Students() {
+  return (
+    <div style={{backgroundColor: 'lightgray', border: '3px solid lightsalmon', margin: '10px' ,borderRadius:'20px'}}>
+      <h1>Name: Anodal Khan</h1>
+      <h4>Class: Eight</h4>
+    </div>
+  )
 }
 
 export default App;
